@@ -27,7 +27,9 @@ yfi=0x0bc529c00C6401aEF6D220BE8C6Ea1667F6Ad93e
 price() {
   if [[ $1 = 'eth' ]]; then
     echo $(curl -s https://api.coingecko.com/api/v3/simple/price\?ids\=ethereum\&vs_currencies\=usd | jq '.ethereum.usd')
-  else
+  elif [[ $1 = 'btc' ]]; then 
+    echo $(curl -s https://api.coingecko.com/api/v3/simple/price\?ids\=bitcoin\&vs_currencies\=usd | jq '.bitcoin.usd')
+  else 
     echo $(curl -s https://api.coingecko.com/api/v3/coins/ethereum/contract/$1 | jq '.market_data.current_price.usd')
   fi
 }
