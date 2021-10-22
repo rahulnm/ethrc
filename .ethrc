@@ -1,6 +1,8 @@
 # Ethereum helper methods
 # source this in your .bashrc or .zshrc file with `. ~/.ethrc`
 
+alias whicheth='echo $ETH_RPC_URL'
+
 # --- Token addresses ---
 aave=0x7Fc66500c84A76Ad7e9c93437bFc5Ac33E2DDaE9
 comp=0xc00e94Cb662C3520282E6f5717214004A7f26888
